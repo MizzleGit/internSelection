@@ -36,7 +36,7 @@ function switchBack(){
     rightDiv.style.transition = 'right 1s cubic-bezier(0.5, 1, 0.5, 1)';
     rightDiv.style.right = '-60vw';
 
-    loginForm.addEventListener('transitionend', function(){
+    setTimeout(() => {
         loginForm.style.display = "none";
         var loginButton = document.getElementById("login-selected");
         var signupButton = document.getElementById("signup-selected");
@@ -47,7 +47,21 @@ function switchBack(){
         setTimeout(() => {
             loginButton.style.opacity = '1';
             signupButton.style.opacity = '1';
-        }, 1);
-    })
+        }, 150);
+    }, 150);
+
 }
 
+    // loginForm.addEventListener('transitionend', function(){
+    //     loginForm.style.display = "none";
+    //     var loginButton = document.getElementById("login-selected");
+    //     var signupButton = document.getElementById("signup-selected");
+    //     loginButton.style.transition = 'opacity 2s ease';
+    //     signupButton.style.transition = 'opacity 2s ease';
+    //     loginButton.style.display = 'flex';
+    //     signupButton.style.display = 'flex';
+    //     setTimeout(() => {
+    //         loginButton.style.opacity = '1';
+    //         signupButton.style.opacity = '1';
+    //     }, 1);
+    // })
