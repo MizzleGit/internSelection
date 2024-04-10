@@ -114,6 +114,22 @@ body{
     transform: translateY(5px);
     box-shadow: none;
 }
+
+
+/* Illustration when SIGNUP is selected */
+.signup-selected-left-div{
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    position: absolute;
+    left: -60vw;
+    background-image: url(signup-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+
 /* End of login section */
 
 
