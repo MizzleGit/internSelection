@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="internSelection.css">
+    <script src="internSelection.js"></script>
     <title>Stage</title>
 </head>
 <body>
     <div class="login-left">
-        <button class="custom-button">S'inscrire pour un stage</button>
-        <!-- <div class="login-form">
+        <button id="login-selected" onclick="loginSelected()" class="custom-button">Suivi votre demande</button>
+        <div class="login-form">
             <form>
                 <h1>Connexion</h1>
                 <div class="login-form-email login-form-input">
@@ -23,10 +24,13 @@
                     <input type="submit" value="Se connecter">
                 </div>
             </form>
-        </div> -->
+        </div>
     </div>
     <div class="signup-right">
-        <button class="custom-button">Suivi votre demande</button>
+        <div class="login-selected-right-div" onclick="switchBack()">
+
+        </div>
+        <button id="signup-selected" class="custom-button">S'inscrire pour un stage</button>
     </div>
 </body>
 </html>
