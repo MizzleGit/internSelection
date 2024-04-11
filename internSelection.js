@@ -59,7 +59,7 @@ function switchBack(){
     // 
     var signupForm = document.getElementsByClassName("signup-form")[0];
     signupForm.style.transition = 'opacity 1s ease';
-    loginForm.style.opacity = 0;
+    signupForm.style.opacity = 0;
     // 
 
     var rightDiv = document.getElementsByClassName('login-selected-right-div')[0];
