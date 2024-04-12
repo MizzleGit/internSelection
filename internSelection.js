@@ -84,8 +84,8 @@ function switchBack(){
         setTimeout(() => {
             loginButton.style.opacity = '1';
             signupButton.style.opacity = '1';
-        }, 150);
-    }, 150);
+        }, 500);
+    }, 1000);
 
 }
 
