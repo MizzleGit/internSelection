@@ -104,6 +104,7 @@ body{
     border-radius: 3px;
     border: none;
     box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.3);
+    background-color: white;
 }
 
 .login-form-submit input:hover{
@@ -228,14 +229,15 @@ body{
     font-weight: bold;
     font-size: 1.1rem;
     display: flex;
-    background-color: #54df0a;
-    box-shadow: 0 5px 0 0 #5eac15;
+    background-color: #0f9660;
+    box-shadow: 0 5px 0 0 #09603d;
     height: 36px;
     width: 300px;
     align-items: center;
     justify-content: center;
     border: none;
     border-radius: 30px;
+    color: white;
 }
 
 .signup-submit-button:active{
@@ -350,20 +352,10 @@ body{
         width: 100vw;
         order: 2;
     }
-}
-
-@media screen and (orientation:portrait){
-    body{
-        flex-direction: column;
+    .login-selected-right-div{
+        display: none;
     }
-    .signup-right{
-        height: 50vh;
-        width: 100vw;
-        order: 1;
-    }
-    .login-left{
-        height: 50vh;
-        width: 100vw;
-        order: 2;
+    .signup-selected-left-div{
+        display: none;
     }
 }

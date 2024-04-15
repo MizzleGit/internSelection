@@ -1,32 +1,41 @@
-
+const mediaMax750 = window.matchMedia("(max-width:705px)");
 
 // login-selected
 
 function loginSelected(){
-
-    document.getElementsByClassName("login-selected-right-div")[0].style.opacity = "1";
-    // loginForm
-    var loginForm = document.getElementsByClassName("login-form")[0];
-    loginForm.style.display = "flex";
-    loginForm.style.transition = 'opacity 1s ease';
-    setTimeout(() =>{
+    if (mediaMax750.matches){
+        var loginForm = document.getElementsByClassName("login-form")[0];
+        document.getElementsByClassName("signup-right")[0].style.display = "none";
+        document.getElementsByClassName("login-left")[0].style.height = "100vh";
+        document.getElementsByClassName("custom-button")[0].style.display = "none";
+        loginForm.style.display = "flex";
         loginForm.style.opacity = 1;
-    }, 1);
+    }
+    else{
+        document.getElementsByClassName("login-selected-right-div")[0].style.opacity = "1";
+        // loginForm
+        var loginForm = document.getElementsByClassName("login-form")[0];
+        loginForm.style.display = "flex";
+        loginForm.style.transition = 'opacity 1s ease';
+        setTimeout(() =>{
+            loginForm.style.opacity = 1;
+        }, 1);
 
-    // loginButton
-    var loginButton = document.getElementById("login-selected");
-    loginButton.style.display = "none";
-    loginButton.style.opacity = 0;
+        // loginButton
+        var loginButton = document.getElementById("login-selected");
+        loginButton.style.display = "none";
+        loginButton.style.opacity = 0;
 
-    // signupButton
-    var signupButton = document.getElementById("signup-selected");
-    signupButton.style.display = "none";
-    signupButton.style.opacity = 0;
+        // signupButton
+        var signupButton = document.getElementById("signup-selected");
+        signupButton.style.display = "none";
+        signupButton.style.opacity = 0;
 
-    // login illustration
-    var rightDiv = document.querySelector('.login-selected-right-div');
-    rightDiv.style.transition = 'right 1s cubic-bezier(0.5, 1, 0.5, 1)';
-    rightDiv.style.right = '0vw';
+        // login illustration
+        var rightDiv = document.querySelector('.login-selected-right-div');
+        rightDiv.style.transition = 'right 1s cubic-bezier(0.5, 1, 0.5, 1)';
+        rightDiv.style.right = '0vw';
+    }
 }
 
 function signupSelected(){
