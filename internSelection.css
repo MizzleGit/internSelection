@@ -121,14 +121,13 @@ body{
     opacity: 0;
     height: 100vh;
     width: 50vw;
-    /* background-color: ; */
+    background-color: white;
     position: absolute;
     left: -60vw;
-    background-image: url(logo\ cri\ full.png);
+    background-image: url(signup-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-color: white;
-    background-size: 60%;
+    background-size: 80%;
 }
 
 
@@ -253,10 +252,10 @@ body{
     background-color: white;
     position: absolute;
     right: -60vw;
-    background-image: url(logo\ cri\ full.png);
+    background-image: url(login-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 110%;
 }
 
 
@@ -354,15 +353,8 @@ body{
 }
 
 @media screen and (orientation:portrait){
-    .signup-selected-left-div{
-        display: none;
-    }
-    .login-selected-right-div{
-        display: none;
-    }
     body{
         flex-direction: column;
-        overflow: scroll;
     }
     .signup-right{
         height: 50vh;
