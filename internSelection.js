@@ -8,7 +8,7 @@ function loginSelected(){
     // loginForm
     var loginForm = document.getElementsByClassName("login-form")[0];
     loginForm.style.display = "flex";
-    loginForm.style.transition = 'opacity 2s ease';
+    loginForm.style.transition = 'opacity 1s ease';
     setTimeout(() =>{
         loginForm.style.opacity = 1;
     }, 1);
@@ -33,7 +33,7 @@ function signupSelected(){
     document.getElementsByClassName("signup-selected-left-div")[0].style.opacity = "1";
     var signupForm = document.getElementsByClassName("signup-form")[0];
     signupForm.style.display = "flex";
-    signupForm.style.transition = 'opacity 2s ease';
+    signupForm.style.transition = 'opacity 1s ease';
     setTimeout(() =>{
         signupForm.style.opacity = 1;
     }, 1);
@@ -56,12 +56,12 @@ function signupSelected(){
 
 function switchBack(){
     var loginForm = document.getElementsByClassName("login-form")[0];
-    loginForm.style.transition = 'opacity 1s ease';
+    loginForm.style.transition = 'opacity 0.5s ease';
     loginForm.style.opacity = 0;
 
     // 
     var signupForm = document.getElementsByClassName("signup-form")[0];
-    signupForm.style.transition = 'opacity 1s ease';
+    signupForm.style.transition = 'opacity 0.5s ease';
     signupForm.style.opacity = 0;
     // 
 
@@ -80,8 +80,8 @@ function switchBack(){
         signupForm.style.display = "none";
         var loginButton = document.getElementById("login-selected");
         var signupButton = document.getElementById("signup-selected");
-        loginButton.style.transition = 'opacity 2s ease';
-        signupButton.style.transition = 'opacity 2s ease';
+        loginButton.style.transition = 'opacity 0.5s ease';
+        signupButton.style.transition = 'opacity 0.5s ease';
         loginButton.style.display = 'flex';
         signupButton.style.display = 'flex';
         setTimeout(() => {
@@ -90,7 +90,7 @@ function switchBack(){
             document.getElementsByClassName("signup-selected-left-div")[0].style.opacity = "0";
             document.getElementsByClassName("login-selected-right-div")[0].style.opacity = "0";
         }, 500);
-    }, 1000);
+    }, 500);
 
 }
 
