@@ -118,6 +118,7 @@ body{
 
 /* Illustration when SIGNUP is selected */
 .signup-selected-left-div{
+    opacity: 0;
     height: 100vh;
     width: 50vw;
     background-color: white;
@@ -245,6 +246,7 @@ body{
 
 /* Illustration when LOGIN is selected */
 .login-selected-right-div{
+    opacity: 0;
     height: 100vh;
     width: 50vw;
     background-color: white;

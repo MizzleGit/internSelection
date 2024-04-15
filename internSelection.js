@@ -3,6 +3,8 @@
 // login-selected
 
 function loginSelected(){
+
+    document.getElementsByClassName("login-selected-right-div")[0].style.opacity = "1";
     // loginForm
     var loginForm = document.getElementsByClassName("login-form")[0];
     loginForm.style.display = "flex";
@@ -28,6 +30,7 @@ function loginSelected(){
 }
 
 function signupSelected(){
+    document.getElementsByClassName("signup-selected-left-div")[0].style.opacity = "1";
     var signupForm = document.getElementsByClassName("signup-form")[0];
     signupForm.style.display = "flex";
     signupForm.style.transition = 'opacity 2s ease';
@@ -84,6 +87,8 @@ function switchBack(){
         setTimeout(() => {
             loginButton.style.opacity = '1';
             signupButton.style.opacity = '1';
+            document.getElementsByClassName("signup-selected-left-div")[0].style.opacity = "0";
+            document.getElementsByClassName("login-selected-right-div")[0].style.opacity = "0";
         }, 500);
     }, 1000);
 
