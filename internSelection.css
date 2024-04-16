@@ -50,7 +50,6 @@ body{
 
 .login-form-input{
     margin: 10px 0;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -62,7 +61,7 @@ body{
 .login-form-email input{
     height: 36px;
     width: 250px;
-    background-color: rgba(0, 0, 0, 0);
+    background: none;
     border: 1px solid white;
     border-radius: 3px;
     outline: none;
@@ -107,10 +106,6 @@ body{
     background-color: white;
 }
 
-.login-form-submit input:hover{
-    color: unset;
-}
-
 .login-form-submit input:active{
     transform: translateY(5px);
     box-shadow: none;
@@ -124,13 +119,29 @@ body{
     width: 50vw;
     background-color: white;
     position: absolute;
-    left: -60vw;
+    left: -50vw;
     background-image: url(cri-logo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 65%;
 }
 
+.login-back{
+    display: none;
+    position: absolute;
+    left: 1vw;
+}
+.login-back button{
+    width: 20px;
+    height: 60px;
+    font-size: larger;
+    background-color: #da413e;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px black;
+}
 
 /* End of login section */
 
@@ -253,7 +264,7 @@ body{
     width: 50vw;
     background-color: white;
     position: absolute;
-    right: -60vw;
+    right: -50vw;
     background-image: url(cri-logo.png);
     background-position: center;
     background-repeat: no-repeat;
