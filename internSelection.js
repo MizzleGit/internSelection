@@ -8,7 +8,7 @@ function loginSelected(){
     let loginForm = document.getElementById("login-form");
     let loginButton = document.getElementById("login-selected");
     let signupButton = document.getElementById("signup-selected");
-    let rightDiv = document.querySelector('.login-selected-right-div');
+    let rightDiv = document.getElementById('login-selected-right-div');
 
 
     // For mobile (Work in progress)
@@ -51,8 +51,8 @@ function signupSelected(){
 
 
     // Variables
-    let leftDiv = document.getElementsByClassName("signup-selected-left-div")[0];
-    let signupForm = document.getElementsByClassName("signup-form")[0];
+    let leftDiv = document.getElementById("signup-selected-left-div");
+    let signupForm = document.getElementById("signup-form");
     let signupButton = document.getElementById("signup-selected");
     let loginButton = document.getElementById("login-selected");
 
@@ -79,40 +79,47 @@ function signupSelected(){
 } // End of function signupSelected
 
 function switchBack(){
+
+    // Variables
     let loginForm = document.getElementById("login-form");
-    let signupForm = document.getElementsByClassName("signup-form")[0];
-    let rightDiv = document.getElementsByClassName('login-selected-right-div')[0];
-    let leftDiv = document.getElementsByClassName('signup-selected-left-div')[0];
+    let signupForm = document.getElementById("signup-form");
+    let rightDiv = document.getElementById('login-selected-right-div');
+    let leftDiv = document.getElementById('signup-selected-left-div');
     let loginButton = document.getElementById("login-selected");
     let signupButton = document.getElementById("signup-selected");
 
-    // Forms opacity 0 - Divs move away
-    //
+    // Forms opacity to 0
     loginForm.style.transition = 'opacity 0.5s ease';
     loginForm.style.opacity = 0;
-    // 
+    //
     signupForm.style.transition = 'opacity 0.5s ease';
     signupForm.style.opacity = 0;
-    // 
+
+    // Move illustrations back 
     rightDiv.style.transition = 'right 1s cubic-bezier(0.5, 1, 0.5, 1)';
-    rightDiv.style.right = '-60vw';
+    rightDiv.style.right = '-50vw';
     // 
     leftDiv.style.transition = 'left 1s cubic-bezier(0.5, 1, 0.5, 1)';
-    leftDiv.style.left = '-60vw';
+    leftDiv.style.left = '-50vw';
     // 
 
     // Forms display = none | buttons appear | divs get opacity 0
     setTimeout(() => {
 
+        // Set displays away
         loginForm.style.display = "none";
         signupForm.style.display = "none";
 
-        loginButton.style.transition = 'opacity 0.5s ease';
-        signupButton.style.transition = 'opacity 0.5s ease';
 
+        // Change button displays to flex and add opacity transition
         loginButton.style.display = 'flex';
+        loginButton.style.transition = 'opacity 0.5s ease';
+        //
         signupButton.style.display = 'flex';
+        signupButton.style.transition = 'opacity 0.5s ease';
         
+        
+        // Make buttons appear and divs disappear after moving away from the screen
         setTimeout(() => {
 
             loginButton.style.opacity = '1';
@@ -125,17 +132,3 @@ function switchBack(){
     }, 500);
 
 }
-
-    // loginForm.addEventListener('transitionend', function(){
-    //     loginForm.style.display = "none";
-    //     var loginButton = document.getElementById("login-selected");
-    //     var signupButton = document.getElementById("signup-selected");
-    //     loginButton.style.transition = 'opacity 2s ease';
-    //     signupButton.style.transition = 'opacity 2s ease';
-    //     loginButton.style.display = 'flex';
-    //     signupButton.style.display = 'flex';
-    //     setTimeout(() => {
-    //         loginButton.style.opacity = '1';
-    //         signupButton.style.opacity = '1';
-    //     }, 1);
-    // })

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="login-left">
-        <div class="signup-selected-left-div" onclick="switchBack()">
+        <div id="signup-selected-left-div" onclick="switchBack()">
 
         </div>
         <button id="login-selected" onclick="loginSelected()" class="custom-button">Suivi votre demande</button>
@@ -33,37 +33,44 @@
         </div>
     </div>
     <div class="signup-right">
-        <div class="login-selected-right-div" onclick="switchBack()">
+        <div id="login-selected-right-div" onclick="switchBack()">
 
         </div>
         <button id="signup-selected" onclick="signupSelected()" class="custom-button">S'inscrire pour un stage</button>
-        <div class="signup-form">
+        <div id="signup-form">
             <form>
                 <h1>S'inscrire</h1>
                 <div class="signup-form-input signup-form-name">
                     <input class="signup-visible-inputs" type="text" name="nom" id="nom" placeholder="Nom" required>
                 </div>
+
                 <div class="signup-form-input signup-form-lastname">
                     <input class="signup-visible-inputs" type="text" name="prenom" id="prenom" placeholder="Prenom" required>
                 </div>
+
                 <div class="signup-form-input signup-form-email">
                     <input class="signup-visible-inputs" type="email" name="email" id="email" placeholder="E-Mail" required>
                 </div>
+
                 <div class="signup-form-input signup-form-cin">
                     <input class="signup-visible-inputs" type="text" name="cin" id="cin" placeholder="CIN" required>
                 </div>
+
                 <div class="signup-form-input signup-form-cv">
                     <label class="file-labels" for="cv">CV</label>
                     <input type="file" name="cv" id="cv" required hidden>
                 </div>
+
                 <div class="signup-form-input signup-form-convention">
                     <label class="file-labels" for="convention">Convention</label>
                     <input type="file" name="convention" id="convention" required hidden>
                 </div>
+
                 <div class="signup-form-input signup-form-demande">
                     <label class="file-labels" for="demande">Demande</label>
                     <input type="file" name="demande" id="demande" required hidden>
                 </div>
+
                 <div class="signup-submit">
                     <button class="signup-submit-button" type="submit">
                         S'inscrire

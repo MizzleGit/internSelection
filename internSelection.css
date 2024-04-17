@@ -102,8 +102,11 @@ body{
     height: 36px;
     border-radius: 3px;
     border: none;
-    box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.3);
-    background-color: white;
+    box-shadow: 0 5px 0 0 #09603d;
+    background-color: #0f9660;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: bold;
 }
 
 .login-form-submit input:active{
@@ -113,7 +116,7 @@ body{
 
 
 /* Illustration when SIGNUP is selected */
-.signup-selected-left-div{
+#signup-selected-left-div{
     opacity: 0;
     height: 100vh;
     width: 50vw;
@@ -170,7 +173,7 @@ body{
     width: 50vw;
 }
 
-.signup-form{
+#signup-form{
     opacity: 0;
     height: 480px;
     width: 350px;
@@ -185,7 +188,7 @@ body{
 }
 
 
-.signup-form h1{
+#signup-form h1{
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
@@ -198,7 +201,7 @@ body{
     box-sizing: border-box;
 }
 
-.signup-form .signup-visible-inputs{
+#signup-form .signup-visible-inputs{
     padding: 10px;
     width: 300px;
     height: 36px;
@@ -210,7 +213,7 @@ body{
     box-sizing: border-box;
 }
 
-.signup-form .signup-visible-inputs::placeholder{
+#signup-form .signup-visible-inputs::placeholder{
     color: white;
 }
 
@@ -258,7 +261,7 @@ body{
 
 
 /* Illustration when LOGIN is selected */
-.login-selected-right-div{
+#login-selected-right-div{
     opacity: 0;
     height: 100vh;
     width: 50vw;
