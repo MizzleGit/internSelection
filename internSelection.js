@@ -123,47 +123,87 @@ function switchBack() {
     let loginButton = document.getElementById("login-selected");
     let signupButton = document.getElementById("signup-selected");
 
-    // Forms opacity to 0
-    loginForm.style.transition = 'opacity 0.5s ease';
-    loginForm.style.opacity = 0;
-    //
-    signupForm.style.transition = 'opacity 0.5s ease';
-    signupForm.style.opacity = 0;
+    // Mobile-only
+    let LoginBack = document.getElementById("login-back");
+    let signupBack = document.getElementById("signup-back");
+    let signupDiv = document.getElementsByClassName("signup-right")[0];
+    let loginDiv = document.getElementsByClassName("login-left")[0];
 
-    // Move illustrations back 
-    rightDiv.style.transition = 'right 1s cubic-bezier(0.5, 1, 0.5, 1)';
-    rightDiv.style.right = '-50vw';
-    // 
-    leftDiv.style.transition = 'left 1s cubic-bezier(0.5, 1, 0.5, 1)';
-    leftDiv.style.left = '-50vw';
-    // 
+    if (mediaMax750.matches){
 
-    // Forms display = none | buttons appear | divs get opacity 0
-    setTimeout(() => {
+        // Make back buttons disappear
+        LoginBack.style.display = "none";
+        signupBack.style.display = "none";
 
-        // Set displays away
-        loginForm.style.display = "none";
+        // Make forms disappear
+        signupForm.style.opacity = "0";
         signupForm.style.display = "none";
 
+        loginForm.style.opacity = "0";
+        loginForm.style.display = "none";
 
-        // Change button displays to flex and add opacity transition
-        loginButton.style.display = 'flex';
-        loginButton.style.transition = 'opacity 0.5s ease';
+        // Set the measures back to normal
+        signupDiv.style.height = "50vh";
+        loginDiv.style.height = "50vh";
+
+        // Make divs appear
+        signupDiv.style.opacity = "1";
+        signupDiv.style.display = "flex";
+
+        loginDiv.style.opacity = "1";
+        loginDiv.style.display = "flex";
+
+        // Make buttons appear
+        loginButton.style.opacity = "1";
+        loginButton.style.display = "flex";
+
+        signupButton.style.opacity = "1";
+        signupButton.style.display = "flex";
+
+    }
+    else{
+        // Forms opacity to 0
+        loginForm.style.transition = 'opacity 0.5s ease';
+        loginForm.style.opacity = 0;
         //
-        signupButton.style.display = 'flex';
-        signupButton.style.transition = 'opacity 0.5s ease';
+        signupForm.style.transition = 'opacity 0.5s ease';
+        signupForm.style.opacity = 0;
 
+        // Move illustrations back 
+        rightDiv.style.transition = 'right 1s cubic-bezier(0.5, 1, 0.5, 1)';
+        rightDiv.style.right = '-50vw';
+        // 
+        leftDiv.style.transition = 'left 1s cubic-bezier(0.5, 1, 0.5, 1)';
+        leftDiv.style.left = '-50vw';
+        // 
 
-        // Make buttons appear and divs disappear after moving away from the screen
         setTimeout(() => {
 
-            loginButton.style.opacity = '1';
-            signupButton.style.opacity = '1';
+            // Set displays away
+            loginForm.style.display = "none";
+            signupForm.style.display = "none";
 
-            leftDiv.style.opacity = "0";
-            rightDiv.style.opacity = "0";
 
+            // Change button displays to flex and add opacity transition
+            loginButton.style.display = 'flex';
+            loginButton.style.transition = 'opacity 0.5s ease';
+            //
+            signupButton.style.display = 'flex';
+            signupButton.style.transition = 'opacity 0.5s ease';
+
+
+            // Make buttons appear and divs disappear after moving away from the screen
+            setTimeout(() => {
+
+                loginButton.style.opacity = '1';
+                signupButton.style.opacity = '1';
+
+                leftDiv.style.opacity = "0";
+                rightDiv.style.opacity = "0";
+
+            }, 500);
         }, 500);
-    }, 500);
+    }
+    
 
 }
