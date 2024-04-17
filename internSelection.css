@@ -129,22 +129,12 @@ body{
     background-size: 65%;
 }
 
-.login-back{
+#login-back{
     display: none;
     position: absolute;
     left: 1vw;
 }
-.login-back button{
-    width: 20px;
-    height: 60px;
-    font-size: larger;
-    background-color: #da413e;
-    outline: none;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 1px black;
-}
+
 
 /* End of login section */
 
@@ -259,6 +249,12 @@ body{
     transform: translateY(5px);
 }
 
+#signup-back {
+    display: none;
+    position: absolute;
+    left: 1vw;
+}
+
 
 /* Illustration when LOGIN is selected */
 #login-selected-right-div{
@@ -289,6 +285,22 @@ body{
 
 
 /* Custom button code */
+
+
+.back-button {
+    width: 20px;
+    height: 60px;
+    font-size: larger;
+    background-color: #da413e;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px black;
+}
+
+
+
 .custom-button {
   align-items: center;
   appearance: none;

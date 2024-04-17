@@ -1,7 +1,7 @@
 const mediaMax750 = window.matchMedia("(max-width:705px)");
 
 // If "Suivi votre demande" (Login) is selected
-function loginSelected(){
+function loginSelected() {
 
 
     // Variables
@@ -10,19 +10,32 @@ function loginSelected(){
     let signupButton = document.getElementById("signup-selected");
     let rightDiv = document.getElementById('login-selected-right-div');
 
+    // Mobile-only
+    let LoginBack = document.getElementById("login-back");
+    let signupDiv = document.getElementsByClassName("signup-right")[0];
+    let loginDiv = document.getElementsByClassName("login-left")[0];
+    let customButtons = document.getElementsByClassName("custom-button")[0];
 
     // For mobile (Work in progress)
-    if (mediaMax750.matches){
-        document.getElementsByClassName("signup-right")[0].style.display = "none";
-        document.getElementsByClassName("login-left")[0].style.height = "100vh";
-        document.getElementsByClassName("custom-button")[0].style.display = "none";
+    if (mediaMax750.matches) {
+        // Make login take up 100% of the screen
+        signupDiv.style.display = "none";
+        loginDiv.style.height = "100vh";
+
+        // Make login elements appear
         loginForm.style.display = "flex";
         loginForm.style.opacity = 1;
+        LoginBack.style.display = "flex";
+
+        // Make "Suivi votre demande" and "S'inscrire pour un stage" buttons disappear
+        signupButton.style.display = "none";
+        loginButton.style.display = "none";
     }
 
 
     // For desktop
-    else{
+    else {
+
         // Making login illustration appear from the right
         rightDiv.style.opacity = "1";
         rightDiv.style.transition = 'right 1s cubic-bezier(0.5, 1, 0.5, 1)';
@@ -39,7 +52,7 @@ function loginSelected(){
         // Making Login form appear with opacity
         loginForm.style.display = "flex";
         loginForm.style.transition = 'opacity 1s ease';
-        setTimeout(() =>{
+        setTimeout(() => {
             loginForm.style.opacity = 1;
         }, 1);
 
@@ -47,38 +60,60 @@ function loginSelected(){
     } // End of else
 } // End of function loginSelected
 
-function signupSelected(){
-
-
+function signupSelected() {
     // Variables
     let leftDiv = document.getElementById("signup-selected-left-div");
     let signupForm = document.getElementById("signup-form");
     let signupButton = document.getElementById("signup-selected");
     let loginButton = document.getElementById("login-selected");
 
+    // Mobile-only
+    let signupBack = document.getElementById("signup-back");
+    let signupDiv = document.getElementsByClassName("signup-right")[0];
+    let loginDiv = document.getElementsByClassName("login-left")[0];
 
-    // Making signup illustration appear from the left
-    leftDiv.style.opacity = "1";
-    leftDiv.style.transition = 'left 1s cubic-bezier(0.5, 1, 0.5, 1)';
-    leftDiv.style.left = '0vw';    
 
-    // Making "S'inscrire pour un stage" button disappear
-    signupButton.style.display = "none";
-    signupButton.style.opacity = 0;
+    if (mediaMax750.matches) {
+        // Make signup take up 100% of the screen
+        loginDiv.style.display = "none";
+        signupDiv.style.height = "100vh";
 
-    // Making "Suivi votre demande" button disappear
-    loginButton.style.display = "none";
-    loginButton.style.opacity = 0;
-
-    // Making Signup form appear with opacity
-    signupForm.style.display = "flex";
-    signupForm.style.transition = 'opacity 1s ease';
-    setTimeout(() =>{
+        // Make signup elements appear
+        signupForm.style.display = "flex";
         signupForm.style.opacity = 1;
-    }, 1);
+        signupBack.style.display = "flex";
+
+        // Make "Suivi votre demande" and "S'inscrire pour un stage" buttons disappear
+        signupButton.style.display = "none";
+        loginButton.style.display = "none";
+    }
+    else {
+
+         // Making signup illustration appear from the left
+        leftDiv.style.opacity = "1";
+        leftDiv.style.transition = 'left 1s cubic-bezier(0.5, 1, 0.5, 1)';
+        leftDiv.style.left = '0vw';    
+
+        // Making "S'inscrire pour un stage" button disappear
+        signupButton.style.display = "none";
+        signupButton.style.opacity = 0;
+
+        // Making "Suivi votre demande" button disappear
+        loginButton.style.display = "none";
+        loginButton.style.opacity = 0;
+
+        // Making Signup form appear with opacity
+        signupForm.style.display = "flex";
+        signupForm.style.transition = 'opacity 1s ease';
+        setTimeout(() =>{
+            signupForm.style.opacity = 1;
+        }, 1);
+
+
+    } // End of else
 } // End of function signupSelected
 
-function switchBack(){
+function switchBack() {
 
     // Variables
     let loginForm = document.getElementById("login-form");
@@ -117,8 +152,8 @@ function switchBack(){
         //
         signupButton.style.display = 'flex';
         signupButton.style.transition = 'opacity 0.5s ease';
-        
-        
+
+
         // Make buttons appear and divs disappear after moving away from the screen
         setTimeout(() => {
 
