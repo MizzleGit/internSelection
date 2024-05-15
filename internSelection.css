@@ -1,6 +1,11 @@
 
 
 /* Main body */
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
 body{
     margin: 0;
     display: flex;
@@ -165,7 +170,7 @@ body{
 
 #signup-form{
     opacity: 0;
-    height: 480px;
+    height: 440px;
     width: 350px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.2);
@@ -177,6 +182,10 @@ body{
     border: 1px solid white;
 }
 
+#signup-form form{
+    width: 100%;
+}
+
 
 #signup-form h1{
     text-align: center;
@@ -186,6 +195,9 @@ body{
 }
 
 .signup-form-input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin: 10px 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -193,7 +205,7 @@ body{
 
 #signup-form .signup-visible-inputs{
     padding: 10px;
-    width: 300px;
+    width: 90%;
     height: 36px;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid white;
@@ -207,25 +219,10 @@ body{
     color: white;
 }
 
-.file-labels{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    font-size: 1.1rem;
+.signup-submit{
+    width: 100%;
     display: flex;
-    background-color: #FFFFFF;
-    box-shadow: 0 5px 0 0 gray;
-    height: 36px;
-    width: 300px;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-}
-
-.file-labels:active{
-    box-shadow: none;
-    transform: translateY(5px);
 }
 
 .signup-submit-button{
@@ -236,7 +233,7 @@ body{
     background-color: #0f9660;
     box-shadow: 0 5px 0 0 #09603d;
     height: 36px;
-    width: 300px;
+    width: 90%;
     align-items: center;
     justify-content: center;
     border: none;
@@ -255,6 +252,23 @@ body{
     left: 1vw;
 }
 
+#theme{
+    outline: none;
+    color: white;
+    border: 1px solid white;
+    background: none;
+    text-align: center;
+    width: 90%;
+    height: 36px;
+    margin: 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+#theme:active, #theme:hover, #theme:focus, #theme:focus-visible{
+    background-color: white;
+    color: black;
+}
 
 /* Illustration when LOGIN is selected */
 #login-selected-right-div{
@@ -365,6 +379,11 @@ body{
 
 /* Media queries */
 @media screen and (max-width:705px){
+    html, body{
+        overflow: hidden;
+        height: 100svh;
+        width: 100vw;
+    }
     body{
         flex-direction: column;
     }
@@ -383,5 +402,11 @@ body{
     }
     .signup-selected-left-div{
         display: none;
+    }
+    #login-form{
+        width: 80vw;
+    }
+    #signup-form{
+        width: 80vw;
     }
 }
